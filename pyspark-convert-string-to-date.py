@@ -28,9 +28,7 @@ df1 = (
     )
     .withColumn(
         "created_timestamp",
-        f.to_timestamp(
-            f.col("created_date_cleaned"), " MMM dd HH:mm:ss Z yyyy"
-        ),
+        f.to_timestamp(f.col("created_date_cleaned"), " MMM dd HH:mm:ss Z yyyy"),
     )
     .withColumn(
         "created_date",

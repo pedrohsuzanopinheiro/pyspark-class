@@ -7,9 +7,7 @@ init(autoreset=True)
 input_uri = "mongodb://127.0.0.1/twitter_user_timeline.guardian"
 output_uri = "mongodb://127.0.0.1/twitter_user_timeline.guardian"
 
-my_spark = (
-    SparkSession.builder.appName("twitter").master("local[*]").getOrCreate()
-)
+my_spark = SparkSession.builder.appName("twitter").master("local[*]").getOrCreate()
 
 file = "data/twitter_followers/the_moyc.json"
 df_followers = my_spark.read.json(file)

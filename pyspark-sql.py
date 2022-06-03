@@ -20,10 +20,8 @@ myspark = (
 )
 
 date_start, date_end = (
-    str(datetime.datetime.strptime("2020-05-01", "%Y-%m-%d").isoformat())
-    + "Z",
-    str(datetime.datetime.strptime("2020-05-31", "%Y-%m-%d").isoformat())
-    + "Z",
+    str(datetime.datetime.strptime("2020-05-01", "%Y-%m-%d").isoformat()) + "Z",
+    str(datetime.datetime.strptime("2020-05-31", "%Y-%m-%d").isoformat()) + "Z",
 )
 print(
     Fore.WHITE + Back.GREEN + f"date_start: {date_start}",
